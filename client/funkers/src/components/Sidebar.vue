@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Sidebar from "./components/Sidebar.vue"
 </script>
 
 <template>
-    <Sidebar />
+    <div id="sidebar"></div>
 </template>
 
 <style>
+
 </style>

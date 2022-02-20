@@ -15,5 +15,15 @@
 export default ((on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  if (config.testingType === 'component') {
+    const { startDevServer } = require('@cypress/webpack-dev-server')
+
+    // Vue's Webpack configuration
+    const webpackConfig = require('@vue/cli-service/webpack.config.js')
+
+    on('dev-server:start', (options) =>
+      startDevServer({ options, webpackConfig })
+    )
+  }
   return config
 }) as Cypress.PluginConfig

@@ -1,13 +1,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useSidebarStore } from '../stores/sidebar'
+import SidebarLink from './SidebarLink.vue'
 
 export default defineComponent({
-    name: 'Sidebar',
+    name: "Sidebar",
+    component: {SidebarLink},
     setup() {
-        const sidebarStore = useSidebarStore()
-        return { sidebarStore }
-    }
+        const sidebarStore = useSidebarStore();
+        return { sidebarStore };
+    },
+    components: { SidebarLink }
 })
 </script>
 
@@ -21,6 +24,8 @@ export default defineComponent({
             <font-awesome-icon :icon="['fas', 'angle-double-left']" />
         </span>
         <br>
+        <SidebarLink to="/" icon="home">Home</SidebarLink>
+        <SidebarLink to="/about" icon="info-circle">About</SidebarLink>
     </div>
 </template>
 
@@ -28,7 +33,8 @@ export default defineComponent({
 :root {
     --sidebar-bg-color: #1e524b;
     --sidebar-item-hover: #ffffff25;
-    --sidebar-item-active: #11200d;
+    --sidebar-item-active: #ffffff0e;
+    --sidebar-item-click: #00000015;
 }
 </style>
 

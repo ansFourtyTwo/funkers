@@ -19,7 +19,8 @@ export default ((on, config) => {
     const { startDevServer } = require('@cypress/webpack-dev-server')
 
     // Vue's Webpack configuration
-    const webpackConfig = require('@vue/cli-service/webpack.config.js')
+    //const webpackConfig = require('@vue/cli-service/webpack.config.js')
+    const webpackConfig = require('../webpack.config.js')
 
     on('dev-server:start', (options) =>
       startDevServer({ options, webpackConfig })

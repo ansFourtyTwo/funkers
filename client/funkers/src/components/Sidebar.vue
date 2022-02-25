@@ -21,11 +21,15 @@ export default defineComponent({
             :class="{ 'rotate-180': sidebarStore.collapsed }"
             @click="sidebarStore.toggleSidebar"
         >
-            <font-awesome-icon :icon="['fas', 'angle-double-left']" />
+            <QIcon name="fas fa-angle-double-left"></QIcon>
         </span>
         <br>
-        <SidebarLink to="/" icon="home">Home</SidebarLink>
-        <SidebarLink to="/about" icon="info-circle">About</SidebarLink>
+        <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
+        <SidebarLink to="/about" icon="fas fa-info-circle">About</SidebarLink>
+        <SidebarLink to="/coding" icon="bi-code-slash">Code</SidebarLink>
+        <SidebarLink to="/food" icon="r_restaurant">Code</SidebarLink>
+        <SidebarLink to="/tennis" icon="mdi-tennis">Tennis</SidebarLink>
+        <SidebarLink to="/poker" icon="mdi-cards-playing-spade">Poker</SidebarLink>
     </div>
 </template>
 

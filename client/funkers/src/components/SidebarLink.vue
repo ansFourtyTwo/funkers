@@ -17,7 +17,7 @@ export default defineComponent({
 
 <template>
     <router-link :to="to" class="link">
-        <font-awesome-icon class="link-icon" :icon="['fas', icon]" />
+        <QIcon class="link-icon" :name="icon"></QIcon>
             <Transition name="fade">            
                 <span v-if="!sidebarStore.collapsed" class="link-text">
                     <slot></slot>
